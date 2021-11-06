@@ -16,7 +16,7 @@ public class ModuleServiceImpl implements ModuleService {
 
 	@Override
 	public Modules findById(int id) {
-		return moduleRepo.findById(id).get();
+		return moduleRepo.findById(id).orElse(null);
 	}
 
 	@Override
@@ -37,8 +37,12 @@ public class ModuleServiceImpl implements ModuleService {
 	
 	@Override
 	public List<Modules> findAllByFacultyId(int facultyId) {
-		return moduleRepo.findAllByFacultyId(facultyId);
+		System.out.println(facultyId);
+		System.out.print(moduleRepo.findAllByfacultyId(facultyId));
+		return moduleRepo.findAllByfacultyId(facultyId);
 	}
+
+	
 	
 }
 

@@ -1,0 +1,6 @@
+projectKey=com.training:moduleregistrationservice
+serverUrl=http://localhost:9000
+serverVersion=7.9.1.27448
+dashboardUrl=http://localhost:9000/dashboard?id=com.training%3Amoduleregistrationservice
+ceTaskId=AXzzfv-D9aM15hO3kqxE
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXzzfv-D9aM15hO3kqxE

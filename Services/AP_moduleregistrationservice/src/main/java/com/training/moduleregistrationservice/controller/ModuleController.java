@@ -34,9 +34,15 @@ public class ModuleController {
 		return new ResponseEntity<Modules>(ModulesService.findById(id),HttpStatus.OK);
 	}
 	
+	@GetMapping("/facultymodules")
+	public ResponseEntity<List> facultyModules(@RequestParam int facultyId){
+		System.out.print(ModulesService.findAllByFacultyId(facultyId));
+		return new ResponseEntity<List>(ModulesService.findAllByFacultyId(facultyId),HttpStatus.OK);
+	}
+	
 	@PostMapping("/module")
 	public ResponseEntity<Modules> createModule(@RequestBody Modules mod){
-		return new ResponseEntity<Modules>(ModulesService.save(mod),HttpStatus.OK);
+		return new ResponseEntity<Modules>(ModulesService.save(mod),HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/module")
@@ -45,9 +51,9 @@ public class ModuleController {
 	}
 
 	@DeleteMapping("/module")
-	public ResponseEntity<String> deleteModule(@RequestParam int id){
-		ModulesService.deleteById(id);
-		return new ResponseEntity<String>("Successfully Deleted.",HttpStatus.OK);
+	public ResponseEntity<Boolean> deleteModule(@RequestParam int id){
+		
+		return new ResponseEntity<Boolean>(ModulesService.deleteById(id),HttpStatus.OK);
 	}
 	
 }

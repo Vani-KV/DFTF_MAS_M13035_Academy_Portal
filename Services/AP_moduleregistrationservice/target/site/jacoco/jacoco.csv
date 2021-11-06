@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+moduleregistrationservice,com.training.moduleregistrationservice.controller,ModuleController,15,48,0,0,2,6,1,6,1,6
+moduleregistrationservice,com.training.moduleregistrationservice.config,SecurityConfig,0,64,0,0,0,10,0,3,0,3
+moduleregistrationservice,com.training.moduleregistrationservice.model,Modules,0,103,0,0,0,29,0,15,0,15
+moduleregistrationservice,com.training.moduleregistrationservice,ModuleregistrationserviceApplication,5,3,0,0,2,1,1,1,1,1
+moduleregistrationservice,com.training.moduleregistrationservice.service,ModuleServiceImpl,11,29,0,0,2,6,1,5,1,5

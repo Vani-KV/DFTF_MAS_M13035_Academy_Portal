@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Modules.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">moduleregistrationservice</a> &gt; <a href="index.source.html" class="el_package">com.training.moduleregistrationservice.model</a> &gt; <span class="el_source">Modules.java</span></div><h1>Modules.java</h1><pre class="source lang-java linenums">package com.training.moduleregistrationservice.model;
+
+import java.time.LocalDate;
+
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+
+@Entity
+public class Modules {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	private String moduleName;
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+	private LocalDate startDate;
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+	private LocalDate endDate;
+	private int facultyId;
+	private String moduleType;
+
+	public Modules() {
+<span class="fc" id="L28">		super();</span>
+<span class="fc" id="L29">	}</span>
+
+	public Modules(int id, String moduleName,LocalDate startDate, LocalDate endDate,
+			int facultyId, String moduleType) {
+<span class="fc" id="L33">		super();</span>
+<span class="fc" id="L34">		this.id = id;</span>
+<span class="fc" id="L35">		this.moduleName = moduleName;</span>
+<span class="fc" id="L36">		this.startDate = startDate;</span>
+<span class="fc" id="L37">		this.endDate = endDate;</span>
+<span class="fc" id="L38">		this.facultyId = facultyId;</span>
+<span class="fc" id="L39">		this.moduleType = moduleType;</span>
+<span class="fc" id="L40">	}</span>
+
+	public int getId() {
+<span class="fc" id="L43">		return id;</span>
+	}
+
+	public void setId(int id) {
+<span class="fc" id="L47">		this.id = id;</span>
+<span class="fc" id="L48">	}</span>
+
+	public String getModuleName() {
+<span class="fc" id="L51">		return moduleName;</span>
+	}
+
+	public void setModuleName(String moduleName) {
+<span class="fc" id="L55">		this.moduleName = moduleName;</span>
+<span class="fc" id="L56">	}</span>
+
+	public LocalDate getStartDate() {
+<span class="fc" id="L59">		return startDate;</span>
+	}
+
+	public void setStartDate(LocalDate startDate) {
+<span class="fc" id="L63">		this.startDate = startDate;</span>
+<span class="fc" id="L64">	}</span>
+
+	public LocalDate getEndDate() {
+<span class="fc" id="L67">		return endDate;</span>
+	}
+
+	public void setEndDate(LocalDate endDate) {
+<span class="fc" id="L71">		this.endDate = endDate;</span>
+<span class="fc" id="L72">	}</span>
+
+	public int getFacultyId() {
+<span class="fc" id="L75">		return facultyId;</span>
+	}
+
+	public void setFacultyId(int facultyId) {
+<span class="fc" id="L79">		this.facultyId = facultyId;</span>
+<span class="fc" id="L80">	}</span>
+
+	public String getModuleType() {
+<span class="fc" id="L83">		return moduleType;</span>
+	}
+
+	public void setModuleType(String moduleType) {
+<span class="fc" id="L87">		this.moduleType = moduleType;</span>
+<span class="fc" id="L88">	}</span>
+
+	@Override
+	public String toString() {
+<span class="fc" id="L92">		return &quot;Modules [id=&quot; + id + &quot;, moduleName=&quot; + moduleName + &quot;, startDate=&quot; + startDate + &quot;, endDate=&quot; + endDate</span>
+				+ &quot;, facultyId=&quot; + facultyId + &quot;, moduleType=&quot; + moduleType + &quot;]&quot;;
+	}
+
+
+
+
+
+
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
