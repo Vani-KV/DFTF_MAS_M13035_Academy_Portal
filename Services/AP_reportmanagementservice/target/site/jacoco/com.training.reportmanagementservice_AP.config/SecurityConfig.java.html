@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SecurityConfig.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">reportmanagementservice_AP</a> &gt; <a href="index.source.html" class="el_package">com.training.reportmanagementservice_AP.config</a> &gt; <span class="el_source">SecurityConfig.java</span></div><h1>SecurityConfig.java</h1><pre class="source lang-java linenums">package com.training.reportmanagementservice_AP.config;
+
+import java.util.List;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.web.cors.CorsConfiguration;
+
+@Configuration
+@EnableWebSecurity
+<span class="fc" id="L13">public class SecurityConfig extends WebSecurityConfigurerAdapter</span>
+{
+
+
+
+
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+<span class="fc" id="L21">CorsConfiguration corsConfiguration = new CorsConfiguration();</span>
+<span class="fc" id="L22">corsConfiguration.setAllowedHeaders(List.of(&quot;Authorization&quot;, &quot;Cache-Control&quot;, &quot;Content-Type&quot;));</span>
+<span class="fc" id="L23">corsConfiguration.setAllowedOriginPatterns(List.of(&quot;*&quot;));</span>
+<span class="fc" id="L24">corsConfiguration.setAllowedMethods(List.of(&quot;GET&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;PUT&quot;,&quot;OPTIONS&quot;,&quot;PATCH&quot;, &quot;DELETE&quot;));</span>
+<span class="fc" id="L25">corsConfiguration.setAllowCredentials(true);</span>
+<span class="fc" id="L26">corsConfiguration.setExposedHeaders(List.of(&quot;Authorization&quot;));</span>
+
+// You can customize the following part based on your project, it's only a sample
+<span class="fc" id="L29">http.authorizeRequests().antMatchers(&quot;/**&quot;).permitAll().anyRequest()</span>
+<span class="fc" id="L30">.authenticated().and().csrf().disable().cors().configurationSource(request -&gt; corsConfiguration);</span>
+
+<span class="fc" id="L32">}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

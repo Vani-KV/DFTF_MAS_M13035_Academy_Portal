@@ -35,7 +35,7 @@ public class ReportController {
 	
 	@PostMapping("/report")
 	public ResponseEntity<Report> createReport(@RequestBody Report report){
-		return new ResponseEntity<Report>(reportService.save(report),HttpStatus.OK);
+		return new ResponseEntity<Report>(reportService.save(report),HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/report")
@@ -44,9 +44,9 @@ public class ReportController {
 	}
 
 	@DeleteMapping("/report")
-	public ResponseEntity<String> deleteReport(@RequestParam int id){
-		reportService.deleteById(id);
-		return new ResponseEntity<String>("Successfully Deleted.",HttpStatus.OK);
+	public ResponseEntity<Boolean> deleteReport(@RequestParam int id){
+		
+		return new ResponseEntity<Boolean>(reportService.deleteById(id),HttpStatus.OK);
 	}
 	
 	@GetMapping("/reportByBatch")
