@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+batchallocationservice,com.training.batchallocationservice.model,Batch,42,76,0,0,1,32,1,16,1,16
+batchallocationservice,com.training.batchallocationservice,BatchallocationserviceApplication,5,3,0,0,2,1,1,1,1,1
+batchallocationservice,com.training.batchallocationservice.service,BatchServiceImpl,0,29,0,0,0,6,0,5,0,5
+batchallocationservice,com.training.batchallocationservice.controller,BatchController,0,48,0,0,0,6,0,6,0,6
+batchallocationservice,com.training.batchallocationservice.config,SecurityConfig,0,64,0,0,0,10,0,3,0,3

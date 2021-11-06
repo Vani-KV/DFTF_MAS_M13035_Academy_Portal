@@ -34,7 +34,7 @@ public class BatchController {
 	
 	@PostMapping("/batch")
 	public ResponseEntity<Batch> createBatch(@RequestBody Batch batch){
-		return new ResponseEntity<Batch>(bService.save(batch),HttpStatus.OK);
+		return new ResponseEntity<Batch>(bService.save(batch),HttpStatus.CREATED);
 	}
 	
 	@PutMapping("/batch")
@@ -43,9 +43,8 @@ public class BatchController {
 	}
 
 	@DeleteMapping("/batch")
-	public ResponseEntity<String> deleteBatch(@RequestParam int id){
-		bService.deleteById(id);
-		return new ResponseEntity<String>("Successfully Deleted.",HttpStatus.OK);
+	public ResponseEntity<Boolean> deleteBatch(@RequestParam int id){
+		return new ResponseEntity<Boolean>(bService.deleteById(id),HttpStatus.OK);
 	}
 	
 	

@@ -2,12 +2,12 @@ package com.training.batchallocationservice.model;
 
 import java.time.LocalDate;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
-import javax.validation.constraints.FutureOrPresent;
 
 @Entity
 @SequenceGenerator(name = "port_gen", sequenceName = "port_gen", initialValue =21001)
@@ -16,9 +16,7 @@ public class Batch {
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "port_gen")
 	private int id;
 	private String batchName;
-	@FutureOrPresent
 	private LocalDate startDate;
-	@FutureOrPresent
 	private LocalDate endDate;
 	private int maximumStudents;
 	private String facultyName;

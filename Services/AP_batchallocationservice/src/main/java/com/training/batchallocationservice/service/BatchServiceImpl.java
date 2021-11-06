@@ -15,7 +15,7 @@ public class BatchServiceImpl implements BatchService {
 
 	@Override
 	public Batch findById(int id) {
-		return batchRepo.findById(id).get();
+		return batchRepo.findById(id).orElse(null);
 	}
 
 	@Override
