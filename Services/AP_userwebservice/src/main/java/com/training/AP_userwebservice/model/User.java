@@ -34,6 +34,7 @@ public class User implements Serializable {
 	@Column(columnDefinition = "varchar(10) default 'inactive'")
 	private String status="inactive";
 	private int batchId;
+	private int moduleId;
 	/**
 	 * 
 	 */
@@ -56,9 +57,10 @@ public class User implements Serializable {
 	 * @param credit
 	 * @param status
 	 * @param batchId
+	 * @param moduleId
 	 */
 	public User(int id, String firstname, String lastname, String role, int age, String gender, String email,
-			String password, int credit, String status, int batchId) {
+			String password, int credit, String status, int batchId, int moduleId) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
@@ -71,6 +73,7 @@ public class User implements Serializable {
 		this.credit = credit;
 		this.status = status;
 		this.batchId = batchId;
+		this.moduleId = moduleId;
 	}
 	/**
 	 * @return the id
@@ -205,6 +208,18 @@ public class User implements Serializable {
 		this.batchId = batchId;
 	}
 	/**
+	 * @return the moduleId
+	 */
+	public int getModuleId() {
+		return moduleId;
+	}
+	/**
+	 * @param moduleId the moduleId to set
+	 */
+	public void setModuleId(int moduleId) {
+		this.moduleId = moduleId;
+	}
+	/**
 	 * @return the serialversionuid
 	 */
 	public static long getSerialversionuid() {
@@ -214,7 +229,7 @@ public class User implements Serializable {
 	public String toString() {
 		return "User [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", role=" + role + ", age="
 				+ age + ", gender=" + gender + ", email=" + email + ", password=" + password + ", credit=" + credit
-				+ ", status=" + status + ", batchId=" + batchId + "]";
+				+ ", status=" + status + ", batchId=" + batchId + ", moduleId=" + moduleId + "]";
 	}
 	
 	

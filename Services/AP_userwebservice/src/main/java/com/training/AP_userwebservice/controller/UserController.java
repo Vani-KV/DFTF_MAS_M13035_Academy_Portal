@@ -35,7 +35,9 @@ public class UserController {
 	
 	@GetMapping("/username")
 	public ResponseEntity<User> userbyemail(@RequestParam String email) {
-		return new ResponseEntity<User>(userserv.findByemail(email), HttpStatus.OK);
+		User result=userserv.findByemail(email);
+		
+		return new ResponseEntity<User>(result, HttpStatus.OK);
 	}
 	
 	@GetMapping("/facultyname")
@@ -56,7 +58,7 @@ public class UserController {
 	}
 	@PostMapping("/user")
 	public ResponseEntity<User> createuser(@RequestBody User user) {
-		return new ResponseEntity<User>(userserv.save(user), HttpStatus.OK);
+		return new ResponseEntity<User>(userserv.save(user), HttpStatus.CREATED);
 	}
 
 	@PutMapping("/user")
