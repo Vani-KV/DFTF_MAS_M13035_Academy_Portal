@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav">
+        <li><img class="navbar-brand" src="assets/images/mortarboard (1).png" alt="logo" width ="60"height="800"></li>&nbsp;
+        <li class="active"><a class="navbar-brand" routerLink="/#">Academy Portal</a></li>
+        <!--li><a class="active" routerLink="/adminhome">Admin Home</a></li>
+        <li><a  routerLink="/facultylist">Faculty Approved List</a></li>
+        <li><a routerLink="/pendinglist">Faculty Pending List</a></li>
+        <li><a routerLink="/batch">Batch Allocation</a></li>
+        <li><a routerLink="/modulereg">Module Registration</a></li-->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a (click)="logout()">Logout <span class="glyphicon glyphicon-log-in"></span></a></li>
+      </ul>
+      </div>
+      </nav>
+
+<h1>Hello {{faculty.firstname}}</h1>
+
+<div class="d-flex justify-content-center">
+<div class="spinner-border" role="status">
+<span class="sr-only" id="loading" *ngIf="loading">Error, refresh the page...</span>
+</div>
+</div>
+<table class="table table-bordered" id='tab'>
+<thead>
+<tr class="success">
+<th scope="col">First Name</th>
+<th scope="col">Last Name</th>
+<th scope="col">Email</th>
+<th scope="col">Role</th>
+<th scope="col">Gender</th>
+<th scope="col">Age</th>
+<th scope="col">credit</th>
+<th scope="col">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ faculty.firstname }}</td>
+<td>{{ faculty.lastname }}</td>
+<td>{{ faculty.email }}</td>
+<td>{{ faculty.role }}</td>
+<td>{{ faculty.gender }}</td>
+<td>{{ faculty.age }}</td>
+<td>{{ faculty.credit}}</td>
+<td>{{ faculty.status }}</td>
+</tr>
+</tbody>
+</table>
+<h1>Currently assigned Courses</h1>
+<table class="table table-bordered" id='tab' >
+<thead>
+<tr class="success">
+<th scope="col">Id</th>
+<th scope="col">Module Name</th>
+<th scope="col">Start Date</th>
+<th scope="col">End Date</th>
+<th scope="col">FacultyName</th>
+<th scope="col">ModuleType</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let m of modules;">
+<td>{{ m.id }}</td>
+<td>{{ m.moduleName }}</td>
+<td>{{ m.startDate }}</td>
+<td>{{ m.endDate }}</td>
+<td>{{ m.facultyName }}</td>
+<td>{{ m.moduleType }}</td>
+</tr>
+</tbody>
+</table>
+<div id="footer"> 
+    <footer class="container-fluid text-center">
+      <p>© 2020 Copyright : Academy Portal</p>
+  </footer> 
+</div>
+<router-outlet></router-outlet>
+</body>
+</html>

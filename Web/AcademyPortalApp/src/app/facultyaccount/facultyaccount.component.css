@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  
+  
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  }
+#footer {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  /* Height of the footer*/ 
+  height: 40px;
+  background:black;
+  color:white;
+}
