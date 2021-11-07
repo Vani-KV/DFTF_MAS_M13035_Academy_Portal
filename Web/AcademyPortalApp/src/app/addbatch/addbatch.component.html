@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    
+    <a class="navbar-brand" href="#"><img class="navbar-brand" src="assets/images/mortarboard (1).png" alt="logo" width ="50"height="50">&nbsp;Academy Portal</a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/adminhome">Admin Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/facultylist">Faculty Approved List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/pendinglist">Faculty Pending List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/batch">Batch Allocation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/modulereg">Module Registration</a>
+      </li>
+    </ul>
+  </nav>
+  
+    
+    <!--div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h3>ADD BATCH</h3>
+            
+          </div>
+        </div>
+          <form class="login-form" [formGroup]="addbatchForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+          <p>
+            <label for="username">Batch Name </label><input type="text" placeholder="batchName" id="batchName" name="batchName"
+              formControlName="batchName">
+            <span *ngIf="(addbatchForm?.get('batchName')?.invalid)">
+              <small style="color:red;" *ngIf="addbatchForm?.get('batchName')?.errors?.required" class="text-danger">username
+                is
+                required</small>
+              </span>
+          </p>
+        </div>
+        <div class="form-group">
+          <p>
+            <label for="startDate">Start Date</label><input type="date" placeholder="startDate" id="startDate" name="startDate"
+              formControlName="startDate">
+            <span *ngIf="(addbatchForm?.get('startDate')?.invalid)">
+              <small style="color:red;" *ngIf="addbatchForm?.get('startDate')?.errors?.required" class="text-danger">field
+                is
+                required</small>
+              </span>
+          </p>
+        </div>
+        <div class="form-group">
+          <p>
+            <label for="endDate">End Date</label><input type="date" placeholder="endDate" id="endDate" name="endDate"
+              formControlName="endDate">
+            <span *ngIf="(addbatchForm?.get('endDate')?.invalid)">
+              <small style="color:red;" *ngIf="addbatchForm?.get('endDate')?.errors?.required" class="text-danger">
+                 field is required</small>
+              </span>
+          </p>
+        </div>
+        <div class="form-group">
+          <p>
+            <label for="maximumStudents">Maximum Student</label><input type="number" placeholder="maximumStudents" id="maximumStudents" name="maximumStudents"
+              formControlName="maximumStudents">
+            <span *ngIf="(addbatchForm?.get('maximumStudents')?.invalid)">
+              <small style="color:red;" *ngIf="addbatchForm?.get('maximumStudents')?.errors?.required" class="text-danger">
+                 field is required</small>
+              </span>
+          </p>
+        </div>
+        <div class="form-group">
+          <p>
+            <label for="facultyName">Faculty Name</label><select id="facultyName" name="facultyName"  formControlName="facultyName"><option [ngValue]="facultyName" *ngFor="let facultyName of facultynames">{{facultyName}}</option></select></p>
+            <span *ngIf="(addbatchForm?.get('facultyId')?.invalid)">
+              <small style="color:red;" *ngIf="addbatchForm?.get('facultyId')?.errors?.required" class="text-danger">field is required</small>
+              </span>
+          <p>
+          </div> 
+          <button>Add Batch</button>
+        </form>
+      </div>
+    </div-->
+
+
+    <div id="login">
+      <h3 class="text-center text-white pt-5">Create New Batch</h3>
+      <div class="container">
+          <div id="login-row" class="row justify-content-center align-items-center">
+              <div id="login-column" class="col-md-6">
+                  <div id="login-box" class="col-md-12">
+                    <form class="login-form" [formGroup]="addbatchForm" (ngSubmit)="onSubmit()">
+                          <h3 class="text-center text-info">Create Batch</h3>
+                          <div class="form-group">
+                            <p>
+                              <label for="username" class="text-info">Batch Name: </label><input type="text" placeholder="batchName" id="batchName" name="batchName"
+                                formControlName="batchName" class="form-control">
+                              <span *ngIf="(addbatchForm?.get('batchName')?.invalid)">
+                                <small style="color:red;" *ngIf="addbatchForm?.get('batchName')?.errors?.required" class="text-danger">*Batch Name
+                                  is
+                                  required</small>
+                                </span>
+                            </p>
+                          </div>
+                          <div class="form-group">
+                            <p>
+                              <label for="startDate" class="text-info">Start Date:</label><input type="date" placeholder="startDate" id="startDate" name="startDate"
+                                formControlName="startDate" class="form-control">
+                              <span *ngIf="(addbatchForm?.get('startDate')?.invalid)">
+                                <small style="color:red;" *ngIf="addbatchForm?.get('startDate')?.errors?.required" class="text-danger">*Start Date field
+                                  is
+                                  required</small>
+                                </span>
+                            </p>
+                          </div>
+                          <div class="form-group">
+                            <p>
+                              <label for="endDate" class="text-info">End Date:</label><input type="date" placeholder="endDate" id="endDate" name="endDate"
+                                formControlName="endDate" class="form-control">
+                              <span *ngIf="(addbatchForm?.get('endDate')?.invalid)">
+                                <small style="color:red;" *ngIf="addbatchForm?.get('endDate')?.errors?.required" class="text-danger">*End Date
+                                   field is required</small>
+                                </span>
+                            </p>
+                          </div>
+                          <div class="form-group">
+                            <p>
+                              <label for="maximumStudents"class="text-info">Maximum Students:</label><input type="number" placeholder="maximumStudents" id="maximumStudents" name="maximumStudents"
+                                formControlName="maximumStudents" class="form-control">
+                              <span *ngIf="(addbatchForm?.get('maximumStudents')?.invalid)">
+                                <small style="color:red;" *ngIf="addbatchForm?.get('maximumStudents')?.errors?.required" class="text-danger">*Maximum Students
+                                   field is required</small>
+                                </span>
+                            </p>
+                          </div>
+                          <div class="form-group">
+                            <p>
+                              <label for="facultyName" class="text-info">Faculty Name:</label><select id="facultyName" name="facultyName"  formControlName="facultyName" class="form-control"><option [ngValue]="facultyName" *ngFor="let facultyName of facultynames">{{facultyName}}</option></select></p>
+                              <span *ngIf="(addbatchForm?.get('facultyName')?.invalid)">
+                                <small style="color:red;" *ngIf="addbatchForm?.get('facultyName')?.errors?.required" class="text-danger">*Faculty Name field is required</small>
+                                </span>
+                            <p>
+                            </div> 
+                          
+                          <div class="form-group">
+                            <button class="btn btn-info btn-md" style="margin-top: -2px;">Create and Add Batch</button>
+                            
+                          </div>
+                          
+                      </form>
+                  </div>
+              </div>
+              <div id="footer"> 
+                <footer class="container-fluid text-center">
+                <p>© 2020 Copyright : Academy Portal</p>
+                
+              </footer> 
+            </div>  
+          </div>
+      </div>
+  </div>
+    <router-outlet></router-outlet>
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    
+  }
+  
+  
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  
+  }
+#footer {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  /* Height of the footer*/ 
+  height: 40px;
+  background:black;
+  color:white;
+}
+.bg {
+  /* The image used */
+  background-image: url(C:/java-sw/DFTF_MAS_M13035/Angular_WorkSpace/AcademyPortalApp/src/assets/images/slider-image1.jpg);
+opacity: 0.75;
+
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: azure;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  width:100%;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centeredbottom {
+  position: absolute;
+  top: 60%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  
+}
