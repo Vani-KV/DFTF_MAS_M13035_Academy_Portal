@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    
+    <a class="navbar-brand" href="#"><img class="navbar-brand" src="assets/images/mortarboard (1).png" alt="logo" width ="50"height="50">&nbsp;Academy Portal</a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/adminhome">Admin Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/facultylist">Faculty Approved List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/pendinglist">Faculty Pending List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/batch">Batch Allocation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/modulereg">Module Registration</a>
+      </li>
+    </ul>
+  </nav>
+  
+<!--form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
+        
+    <p>
+      <label for="participation">Participation:</label><input type="radio" value="1" id="participation" name="participation" formControlName="participation"> Fair <input type="radio" value="3" id="participation" name="participation" formControlName="participation"> Good  <input type="radio" value="5" id="participation" name="participation" formControlName="participation"> Excellent
+      <small style="color:red;" *ngIf="reportForm?.get('participation')?.errors?.required" class="text-danger">select any one option. This field is
+        required.</small>
+    </p>
+    <p>
+        <label for="interaction">Interaction:</label><input type="radio" value="1" id="interaction" name="interaction" formControlName="interaction"> Fair <input type="radio" value="3" id="interaction" name="interaction" formControlName="interaction"> Good  <input type="radio" value="5" id="interaction" name="interaction" formControlName="interaction">Excellent
+        <small style="color:red;" *ngIf="reportForm?.get('interaction')?.errors?.required" class="text-danger">select any one option. This field is
+          required.</small>
+      </p>
+      <p>
+        <label for="understanding">Understanding  Skills:</label><input type="radio" value="1" id="understanding" name="understanding" formControlName="understanding"> Fair <input type="radio" value="3" id="understanding" name="understanding" formControlName="understanding"> Good  <input type="radio" value="5" id="understanding" name="understanding" formControlName="understanding">Excellent
+        <small style="color:red;" *ngIf="reportForm?.get('understanding')?.errors?.required" class="text-danger">select any one option. This field is
+          required.</small>
+      </p>
+      <p>
+        <label for="implementation">Implementation: </label><input type="radio" value="1" id="implementation" name="implementation" formControlName="implementation"> Fair <input type="radio" value="3" id="implementation" name="implementation" formControlName="implementation"> Good  <input type="radio" value="5" id="implementation" name="implementation" formControlName="implementation">Excellent
+        <small style="color:red;" *ngIf="reportForm?.get('implementation')?.errors?.required" class="text-danger">select any one option. This field is
+          required.</small>
+      </p>
+    
+    
+      <button type="submit">Submit</button>
+    
+  </form-->
+
+  <div id="login">
+    <h3 class="text-center text-white pt-5">Create Report</h3>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+                  <form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
+                        <h3 class="text-center text-info">Report</h3>
+                        <div class="form-group">
+                        
+                          <label for="participation" class="text-info">Participation:</label>&nbsp;<input type="radio" value="1" id="participation" name="participation" formControlName="participation"><label style="color: black;">Fair</label>&nbsp;<input type="radio" value="3" id="participation" name="participation" formControlName="participation"><label style="color: black;">Good</label>&nbsp;<input type="radio" value="5" id="participation" name="participation" formControlName="participation"><label style="color: black;">Excellent</label> 
+                          <br><small style="color:red;" *ngIf="reportForm?.get('participation')?.errors?.required" class="text-danger">*Select any one option. This field is
+                            required.</small>
+                         
+                        </div>
+                        <div class="form-group">
+                          
+                          <label for="interaction" class="text-info">Interaction:</label>&nbsp;<input type="radio" value="1" id="interaction" name="interaction" formControlName="interaction"><label style="color: black;">Fair</label>&nbsp;<input type="radio" value="3" id="interaction" name="interaction" formControlName="interaction"><label style="color: black;">Good</label>&nbsp;<input type="radio" value="5" id="interaction" name="interaction" formControlName="interaction"><label style="color: black;">Excellent</label>
+                          <br><small style="color:red;" *ngIf="reportForm?.get('interaction')?.errors?.required" class="text-danger">*Select any one option. This field is
+                            required.</small>
+                         
+                        </div>
+                        <div class="form-group">
+                          
+                          <label for="understanding" class="text-info">Understanding  Skills:</label>&nbsp;<input type="radio" value="1" id="understanding" name="understanding" formControlName="understanding"><label style="color: black;">Fair</label>&nbsp;<input type="radio" value="3" id="understanding" name="understanding" formControlName="understanding"><label style="color: black;"> Good </label>&nbsp;<input type="radio" value="5" id="understanding" name="understanding" formControlName="understanding"><label style="color: black;">Excellent</label>
+                          <br><small style="color:red;" *ngIf="reportForm?.get('understanding')?.errors?.required" class="text-danger">*Select any one option. This field is
+                            required.</small>
+                         
+                        </div>
+                        <div class="form-group">
+                          
+                          <label for="implementation" class="text-info">Implementation:</label>&nbsp;<input type="radio" value="1" id="implementation" name="implementation" formControlName="implementation"><label style="color: black;">Fair</label>&nbsp;<input type="radio" value="3" id="implementation" name="implementation" formControlName="implementation"><label style="color: black;">Good</label>&nbsp;<input type="radio" value="5" id="implementation" name="implementation" formControlName="implementation"><label style="color: black;">Excellent</label>
+                          <br><small style="color:red;" *ngIf="reportForm?.get('implementation')?.errors?.required" class="text-danger">*Select any one option. This field is
+                            required.</small>
+                         
+                        </div>
+                        
+                        <div class="form-group">
+                          <button class="btn btn-info btn-md" style="margin-top: -10px;">Submit</button>
+                          
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div id="footer"> 
+              <footer class="container-fluid text-center">
+              <p>© 2020 Copyright : Academy Portal</p>
+              
+            </footer> 
+          </div>  
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+</body>
+</html>
