@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    
+    <a class="navbar-brand" href="#"><img class="navbar-brand" src="assets/images/mortarboard (1).png" alt="logo" width ="50"height="50">&nbsp;Academy Portal</a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home">Home</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+
+<!--form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+  <div class="form-group">
+  <p>
+    <label for="firstname">First Name </label><input type="text" id="firstname" name="firstname"
+      formControlName="firstname">
+    <span *ngIf="(registerForm?.get('firstname')?.invalid)">
+      <small style="color:red;" *ngIf="registerForm?.get('firstname')?.errors?.required" class="text-danger">First Name
+        is
+        required</small>
+      <small style="color:red;" *ngIf="registerForm?.get('firstname')?.errors?.minlength" class="text-danger">First Name
+        minimum length is 5 chars</small>
+      </span>
+
+  </p>
+  </div>
+  <div class="form-group">
+  <p>
+    <label for="lastname">Last Name </label><input type="text" id="lastname" name="lastname" formControlName="lastname">
+    <span *ngIf="(registerForm?.get('lastname')?.invalid)">
+      <small style="color:red;" *ngIf="registerForm?.get('lastname')?.errors?.required" class="text-danger">last Name
+        is
+        required</small>
+      <small style="color:red;" *ngIf="registerForm?.get('lastname')?.errors?.minlength" class="text-danger">last Name
+        minimum length is 5 chars</small>
+      </span>
+  </p>
+  </div>
+  <div class="form-group">
+  <p>
+    <label for="age">Age</label><input type="number" id="age" name="age" formControlName="age">
+    <span *ngIf="(registerForm?.get('age')?.invalid)">
+      <small style="color:red;" *ngIf="registerForm?.get('age')?.errors?.required" class="text-danger">Age
+        is
+        required</small>
+      </span>
+  </p>
+  </div>
+  <div class="form-group">
+  <p>
+    <label for="email">Email </label><input type="text" id="email" name="email" formControlName="email">
+    <span *ngIf="(registerForm?.get('email')?.invalid)">
+      <small style="color:red;" *ngIf="registerForm?.get('email')?.errors?.required" class="text-danger">email
+        is
+        required</small>
+      <small style="color:red;" *ngIf="registerForm?.get('email')?.errors?.email" class="text-danger">email is in valid format</small>
+      </span>
+  </p>
+  </div>
+  <div class="form-group">
+  <p>
+    <label class="control-label col-sm-3" for="gender">Gender </label><input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male<input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+    <small style="color:red;" *ngIf="registerForm?.get('gender')?.errors?.required" class="text-danger">gender is
+      required</small>
+  </p>
+</div>
+<div class="form-group">
+  <p>
+    <label for="role">Role</label><select id="role" name="role"  formControlName="role"><option [ngValue]="role" *ngFor="let role of roleList">{{role}}</option></select></p></div>
+    <div class="form-group">
+  <p>
+    <label for="password">Password</label><input type="password" id="password" name="password" formControlName="password"
+      />
+      <span *ngIf="(registerForm?.get('password')?.invalid)">
+        <small style="color:red;" *ngIf="registerForm?.get('password')?.errors?.required" class="text-danger">password
+          is
+          required</small>
+        <small style="color:red;" *ngIf="registerForm?.get('password')?.errors?.password" class="text-danger">Password is in valid format</small>
+        </span>
+      </p>
+      </div>
+    <button type="submit">Submit</button>
+  
+</form-->
+
+
+<div id="login">
+  <h3 class="text-center text-white pt-5">Register Yourself Here !</h3>
+  <div class="container">
+      <div id="login-row" class="row justify-content-center align-items-center">
+          <div id="login-column" class="col-md-6">
+              <div id="login-box" class="col-md-12">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+                      <h3 class="text-center text-info">Register</h3>
+                      <div class="form-group">
+                        <p>
+                          <label for="firstname" class="text-info">First Name: </label><input type="text" id="firstname" name="firstname"
+                            formControlName="firstname"  class="form-control">
+                          <span *ngIf="(registerForm?.get('firstname')?.invalid)">
+                            <small style="color:red;" *ngIf="registerForm?.get('firstname')?.errors?.required" class="text-danger">*First Name
+                              is
+                              required</small>
+                            <small style="color:red;" *ngIf="registerForm?.get('firstname')?.errors?.minlength" class="text-danger">*First Name
+                              minimum length is 5 chars</small>
+                            </span>
+                      
+                        </p>
+                        </div>
+                        <div class="form-group">
+                        <p>
+                          <label for="lastname" class="text-info">Last Name:</label><input type="text" id="lastname" name="lastname" formControlName="lastname"  class="form-control">
+                          <span *ngIf="(registerForm?.get('lastname')?.invalid)">
+                            <small style="color:red;" *ngIf="registerForm?.get('lastname')?.errors?.required" class="text-danger">*Last Name
+                              is
+                              required</small>
+                            <small style="color:red;" *ngIf="registerForm?.get('lastname')?.errors?.minlength" class="text-danger">*Last Name
+                              minimum length is 5 chars</small>
+                            </span>
+                        </p>
+                        </div>
+                        <div class="form-group">
+                        <p>
+                          <label for="age" class="text-info">Age:</label><input type="number" id="age" name="age" formControlName="age"  class="form-control">
+                          <span *ngIf="(registerForm?.get('age')?.invalid)">
+                            <small style="color:red;" *ngIf="registerForm?.get('age')?.errors?.required" class="text-danger">*Age
+                              is
+                              required</small>
+                              <small style="color:red;" *ngIf="registerForm?.get('age')?.errors?.min" class="text-danger">*Age should be minimum 18 
+                                </small>
+                            </span>
+                        </p>
+                        </div>
+                        <div class="form-group">
+                        <p>
+                          <label for="email" class="text-info">Email: </label><input type="text" id="email" name="email" formControlName="email"  class="form-control">
+                          <span *ngIf="(registerForm?.get('email')?.invalid)">
+                            <small style="color:red;" *ngIf="registerForm?.get('email')?.errors?.required" class="text-danger">*Email
+                              is
+                              required</small>
+                            <small style="color:red;" *ngIf="registerForm?.get('email')?.errors?.email" class="text-danger">*Email is in valid format</small>
+                            </span>
+                        </p>
+                        </div>
+                        <div class="form-group">
+                        <p>
+                          <label class="control-label col-sm-3" for="gender" class="text-info">Gender: </label>&nbsp;<input type="radio" value="male" id="gender" name="gender" formControlName="gender"><label style="color: black;">Male</label>&nbsp;<input type="radio" value="female" id="gender" name="gender" formControlName="gender"> <label style="color: black;">Female</label>
+                          &nbsp;<small style="color:red;" *ngIf="registerForm?.get('gender')?.errors?.required" class="text-danger">*Gender is
+                            required</small>
+                        </p>
+                      </div>
+                      <div class="form-group">
+                        <p>
+                          <label for="role" class="text-info">Role:</label><select id="role" name="role"  formControlName="role"  class="form-control"><option [ngValue]="role" *ngFor="let role of roleList">{{role}}</option></select>
+                          <small style="color:red;" *ngIf="registerForm?.get('role')?.errors?.required" class="text-danger">*Please select your role
+                            </small>
+                        </p></div>
+                          <div class="form-group">
+                        <p>
+                          <label for="password" class="text-info">Password:</label><input type="password" id="password" name="password" formControlName="password"  class="form-control"/>
+                            <span *ngIf="(registerForm?.get('password')?.invalid)">
+                              <small style="color:red;" *ngIf="registerForm?.get('password')?.errors?.required" class="text-danger">*Password
+                                is
+                                required</small>
+                              <small style="color:red;" *ngIf="registerForm?.get('password')?.errors?.pattern" class="text-danger">*Password should contain atleast 8 characters in length,
+                                Lowercase letters,
+                                Uppercase letters,
+                                Numbers,
+                                Special characters</small>
+                              </span>
+                            </p>
+                            </div>
+                        <div class="form-group">
+                        <button  class="btn btn-info btn-md"  style="margin-top: -10px;" type="submit">Submit</button>
+                                               
+                      </div>
+                      
+                  </form>
+              </div>
+          </div>
+          <div id="footer"> 
+            <footer class="container-fluid text-center">
+            <p>© 2020 Copyright : Academy Portal</p>
+            
+          </footer> 
+        </div>  
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+</body>
+</html>
